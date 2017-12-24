@@ -14,24 +14,24 @@
                      <h1>Register</h1>
                  </div>
                  <div class="register-form-container">
-                     <form id="register-from" action="#">
+                     <form id="register-from" action="../login">
                         <div class="form-group">
-                             <input type="text" name="username" placeholder="๊Username" />
-                             <input type="password" name="password" placeholder="Password"/>
+                             <input type="text" id="username" placeholder="๊Username" />
+                             <input type="password" id="password" placeholder="Password"/>
                          </div>
                          <div class="form-group">
-                             <input type="text" name="firstname" placeholder="Firstname"/>
-                             <input type="text" name="lastname" placeholder="Lastname"/>
+                             <input type="text" id="firstname" placeholder="Firstname"/>
+                             <input type="text" id="lastname" placeholder="Lastname"/>
                          </div>
                          <div class="form-group">
-                             <input type="text" name="nickname" placeholder="Nickname"/>
-                             <input type="text" name="sex" placeholder="Sex"/>
+                             <input type="text" id="nickname" placeholder="Nickname"/>
+                             <input type="text" id="sex" placeholder="Sex"/>
                          </div>
                          <div class="form-group">
-                             <input type="tel" name="tel" placeholder="Telephone"/>
-                             <input type="email" name="email" placeholder="Email"/>
+                             <input type="tel" id="tel" placeholder="Telephone"/>
+                             <input type="email" id="email" placeholder="Email"/>
                          </div>                         
-                             <textarea id="address" name="address" placeholder="Address" ></textarea>
+                             <textarea id="address" id="address" placeholder="Address" ></textarea>
                              <input type="file" name="img" id="uploadImage"/> 
                              <button id="register-button" type="submit">Register</button>
                      </form>

@@ -1,27 +1,44 @@
 $('form').on('submit',(event) => {
-    event.preventDefault()
-    data = $('form').serializeArray()
-    console.log($('#uploadImage'));
+    var loading = false;
     
-    const dataArray = [{
-        "username" : data[0].value,
-        "password" : data[1].value,
-        "firstname" : data[2].value,
-        "lastname" : data[3].value,
-        "nickname" : data[4].value,
-        "sex" : data[5].value,
-        "tel" : data[6].value,
-        "email" : data[7].value,
-        "address" : data[8].value,
-        "image" : $('#uploadImage')[0].value,
-    }]
-    console.log(dataArray)
+    // data = $('form').serializeArray()
+    // console.log($('#uploadImage'));
+    const username = $('#username').val()
+    const password = $('#password').val()
+    const nickname = $('#nickname').val()
+    const sex = $('#sex').val()
+    const email = $('#email').val()
+    const tel = $('#tel').val()
+    const firstname = $('#firstname').val()
+    const lastname = $('#lastname').val()
+    const address = $('#address').val()
+    const image = $('#uploadImage').val()
+    //console.log(Object.value(dataArray))
     $.ajax({
-        type: 'post',
+        method: 'post',
         url: '../../db/register.php',
-        data: dataArray,
+        data: {
+            "username" : username,
+            "password" : password,
+            "firstname" : firstname,
+            "lastname" : lastname,
+            "nickname" : nickname,
+            "sex" : sex,
+            "tel" : tel,
+            "email" : email,
+            "address" : address,
+            "image" : image,
+        },
+        dataType: 'json',
+        //contentType: 'application/json',
         success: () => {
-            console.log("register success")
+            loading = true;
+            if (loading) {
+                window.location.replace("../home")
+            }
+  
+            //$(location).attr("href", '../home/');
+            //$('form').reset()
         }
     })
 })

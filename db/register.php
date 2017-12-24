@@ -1,15 +1,24 @@
-<? 
-    debug_to_console("Add")
-    echo "add "
-    print_r("Add")
+<?php 
 
-    function debug_to_console($data) {
-        if(is_array($data) || is_object($data))
-        {
-            echo("<script>console.log('PHP: ".json_encode($data)."');</script>");
-        } else {
-            echo("<script>console.log('PHP: ".$data."');</script>");
-        }
-    }
+
+$id = uniqid("");
+$user = $_POST['username'];
+$pass = $_POST['password'];
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$nickname = $_POST['nickname'];
+$sex = $_POST['sex'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
+$address = $_POST['address'];
+$image = $_POST['image'];
+require 'connect.php';
+$sql = "INSERT INTO members (username,password,firstname,lastname,nickname,sex,tel,email,address,image,id) 
+    VALUES ('$user','$pass','$firstname','$lastname','$nickname','$sex','$tel','$email','$address','$image','$id')";
     
->
+if ($conn->query($sql) === false) {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+
+
+}  
+?>

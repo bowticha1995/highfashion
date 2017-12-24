@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+.login-container {
+    font-family: "Ubuntu";
+    background-color: #dddd;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container .login {
+    
+    width: 30vw;
+    height: 30vw;
+}
+
+
+.login-container .login .profile {
+    width: 100%;
+    text-align: center;
+}
+
+.login-container .login .profile img {
+    width: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.login-container .login .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.login-container .login .text h1 {
+    text-align: center;
+}
+.login-container .login .text p{
+    text-align: right;
+}
+
+
+.login-container .background-login-container {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+}
+
+.login-container .background-login-container div {
+
+}
+
+.login-container .background-login-container .dialog-container {
+    
+    width: 40vw;
+    height: 250px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.login-container .background-login-container .dialog-container .form-login-container {
+    display: flex;   
+    flex-direction: column;
+}
+
+.login-container .background-login-container .dialog-container .form-login-container #back-button {
+    background-color: #f44336;
+    text-align: center;
+}
+.login-container .background-login-container .dialog-container .text  {
+    display: flex;
+    justify-content: center;
+       
+}
+
+
+.login-container .background-login-container .dialog-container .form-login-container input,button {
+    width: 100%;
+    margin-top: 10px !important;
+    padding-left: 10px;
+}
+
+button {
+    background-color: #008CBA;
+    color: white !important;
+    border-radius: 4px !important;
+    border-color: transparent !important;
+}
+
+form {
+    width: 100%;
+}

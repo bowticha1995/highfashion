@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.register-container {
+    font-family: "Ubuntu";
+    border: 1px solid red;
+    height: 100vh;
+    background-color: #ddd;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container .register {
+    border: 1px solid blue;
+    padding: 10px; 
+    background-color: white;
+    border-radius: 8px;
+}
+
+form {
+    width: 100%
+}
+
+#address {
+    width: 100%;
+    padding-left: 10px;
+}
+
+input {
+    padding-left: 10px;
+}

@@ -15,24 +15,25 @@
                  </div>
                  <div class="register-form-container">
                      <form>
-                     <div class="form-group">
-                             <input type="text" placeholder="๊Username" />
-                             <input type="password" placeholder="Password"/>
+                        <div class="form-group">
+                             <input type="text" name="username" placeholder="๊Username" />
+                             <input type="password" name="password" placeholder="Password"/>
                          </div>
                          <div class="form-group">
-                             <input type="text" placeholder="Firstname"/>
-                             <input type="text" placeholder="Lastname"/>
+                             <input type="text" name="firstname" placeholder="Firstname"/>
+                             <input type="text" name="lastname" placeholder="Lastname"/>
                          </div>
                          <div class="form-group">
-                             <input type="text" placeholder="Nickname"/>
-                             <input type="text" placeholder="Sex"/>
+                             <input type="text" name="nickname" placeholder="Nickname"/>
+                             <input type="text" name="sex" placeholder="Sex"/>
                          </div>
                          <div class="form-group">
-                             <input type="tel" placeholder="Telephone"/>
-                             <input type="email" placeholder="Email"/>
+                             <input type="tel" name="tel" placeholder="Telephone"/>
+                             <input type="email" name="email" placeholder="Email"/>
                          </div>                         
-                             <textarea id="address" placeholder="Address" ></textarea>
-                             <input type="file" /> 
+                             <textarea id="address" name="address" placeholder="Address" ></textarea>
+                             <input type="file" name="img"/> 
+                             <button id="register-button" type="submit">Register</button>
                      </form>
                  </div>
              </div>

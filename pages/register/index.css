@@ -29,3 +29,11 @@ form {
 input {
     padding-left: 10px;
 }
+
+#register-button {
+    margin-top: 10px;
+    width:100%;
+    background-color: green;
+    color: white;
+    border: transparent;
+}

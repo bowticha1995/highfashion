@@ -14,7 +14,7 @@
                      <h1>Register</h1>
                  </div>
                  <div class="register-form-container">
-                     <form>
+                     <form id="register-from" action="#">
                         <div class="form-group">
                              <input type="text" name="username" placeholder="๊Username" />
                              <input type="password" name="password" placeholder="Password"/>
@@ -32,7 +32,7 @@
                              <input type="email" name="email" placeholder="Email"/>
                          </div>                         
                              <textarea id="address" name="address" placeholder="Address" ></textarea>
-                             <input type="file" name="img"/> 
+                             <input type="file" name="img" id="uploadImage"/> 
                              <button id="register-button" type="submit">Register</button>
                      </form>
                  </div>

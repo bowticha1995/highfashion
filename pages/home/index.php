@@ -47,9 +47,9 @@
         <div>
         <div class="home-container">
             <div class="search">
-                <form id="search-form">
+                
                     <input type="text" placeholder="Search By Name" id="search" />
-                </form>
+            
             </div>
             <div class="show-product">
 

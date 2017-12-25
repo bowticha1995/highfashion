@@ -551,43 +551,50 @@ const dresses = [{
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w3.jpg'
 },
-{    name: "Engie Dress",
+{
+    name: "Engie Dress",
     fastival: "",
     price: 800,
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w4.jpg'
 },
-{    name: "Diana Dress",
+{
+    name: "Diana Dress",
     fastival: "",
     price: 700,
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w5.jpg'
 },
-{  name: "Saori Dress",
+{
+    name: "Saori Dress",
     fastival: "",
     price: 700,
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w6.jpg'
 },
-{  name: "Kissy Dress",
+{
+    name: "Kissy Dress",
     fastival: "",
     price: 800,
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w7.jpg'
 },
-{  name: "Pinkk Dress",
+{
+    name: "Pinkk Dress",
     fastival: "",
     price: 600,
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w8.jpg'
 },
-{   name: "Jame Dress",
+{
+    name: "Jame Dress",
     fastival: "",
     price: 700,
     tone: "whitecream",
     picture: '../../public/img/dress/colors/whitecream/w9.jpg'
 },
-{  name: "Me Dress",
+{
+    name: "Me Dress",
     fastival: "",
     price: 800,
     tone: "whitecream",
@@ -611,44 +618,62 @@ $(document).ready(() => {
         )
     })
 
-    //(dress.name === ($('#search').val())}
+    $('#search').keypress((event) => {
+        if (event.target.value !== "") {
+            var input = new RegExp(event.target.value, 'g');
+            if (event.key === "Enter") {
+                console.log("Enter");
+                newArray = dresses.filter((dress) => {
+                    return dress.name.match(input)
+                })
+                var newHTMLFilter = newArray.map((data) => {
+                    return (
+                        `<div class="card">
+                        <div class="image">
+                            <img src="` + data.picture + `" />
+                        </div>
+                        <div class="detail">
+                        <p id="name">Name: ` + data.name + ` </p>
+                        <p id="price">Price: ` + data.price + `</p>
+                            <button>Rent</button>
+                        </div>
+                    </div>`
+                    )
 
-    $('form').on('submit', (event) => {
-        event.preventDefault()
-        console.log(event);
-        input = new RegExp($('#search').val() , 'g');
-        newArray = dresses.filter((dress) => {
-            return dress.name.match(input)
-        })
-            
-        var newHTMLFilter = newArray.map((data) => {
-            return (
-                `<div class="card">
-                    <div class="image">
-                        <img src="` + data.picture + `" />
-                    </div>
-                    <div class="detail">
-                    <p id="name">Name: ` + data.name + ` </p>
-                    <p id="price">Price: ` + data.price + `</p>
-                        <button>Rent</button>
-                    </div>
-                </div>`
-            )
-        
-        })
-        $(".show-product").html(newHTMLFilter.join(""));
-    })
-    $('#search-form input').blur((event) => {
-        console.log(event.target.value);
-        if(event.target.value === '') {
+                })
+                $(".show-product").html(newHTMLFilter.join(""));
+            }
+
+            //console.log(event)
+
+        }else {
             $(".show-product").html(newHTML.join(""));
         }
-        //$(".show-product").html(newHTML.join(""));
-    });
-    $( "input" ).change(function(event) {
-        if(event.target.value == '') {
-            $(".show-product").html(newHTML.join(""));
-        } 
-      });
+    })
     $(".show-product").html(newHTML.join(""));
+    //(dress.name === ($('#search').val())}
+
+    // $('form').on('submit', (event) => {
+    //     event.preventDefault()
+    //     console.log(event);
+    //     input = new RegExp($('#search').val() , 'g');
+    // newArray = dresses.filter((dress) => {
+    //     return dress.name.match(input)
+    // })
+
+
+    // })
+    // $('#search-form input').blur((event) => {
+    //     console.log(event.target.value);
+    //     if(event.target.value === '') {
+    //         $(".show-product").html(newHTML.join(""));
+    //     }
+    //     //$(".show-product").html(newHTML.join(""));
+    // });
+    // $( "input" ).change(function(event) {
+    //     if(event.target.value == '') {
+    //         $(".show-product").html(newHTML.join(""));
+    //     } 
+    //   });
+    // $(".show-product").html(newHTML.join(""));
 });

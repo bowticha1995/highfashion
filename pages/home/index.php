@@ -46,23 +46,17 @@
             </div>
         <div>
         <div class="home-container">
-            <div class="head">
-                    <h1>Rent Cloth</h1>
+            <div class="search">
+                <form id="search-form">
+                    <input type="text" placeholder="Search By Name" id="search" />
+                </form>
             </div>
-            <div class="imput">
-                <label for="product">Product: 
-                    <input type="text" id="product">
-                    <button type="submit" id="submit">Add Product</button>
-                </label>
-            </div>
-            <div id="list-product">
-              <ul>
-                    <li id="list"></li>
-              </ul> 
+            <div class="show-product">
+
             </div>
         </div>
             <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-            <script src="../../script/global.js"></script>
+            <script src="index.js"></script>
     </body>
 </html>

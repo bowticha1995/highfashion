@@ -14,7 +14,7 @@
                      <h1>Register</h1>
                  </div>
                  <div class="register-form-container">
-                     <form id="register-from" action="../login">
+                     <form id="register-from">
                         <div class="form-group">
                              <input type="text" id="username" placeholder="๊Username" />
                              <input type="password" id="password" placeholder="Password"/>

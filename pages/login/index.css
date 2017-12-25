@@ -80,6 +80,7 @@
 }
 
 
+
 .login-container .background-login-container .dialog-container .form-login-container input,button {
     width: 100%;
     margin-top: 10px !important;
@@ -95,4 +96,10 @@ button {
 
 form {
     width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 14px;
+    }
 }

@@ -618,9 +618,7 @@ $(document).ready(() => {
         console.log(event);
         input = new RegExp($('#search').val() , 'g');
         newArray = dresses.filter((dress) => {
-            console.log("filter" , dress.name.match(input));
             return dress.name.match(input)
-
         })
             
         var newHTMLFilter = newArray.map((data) => {

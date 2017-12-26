@@ -48,7 +48,7 @@
         <div class="home-container">
             <div class="search">
                 
-                    <input type="text" placeholder="Search By Name" id="search" />
+                    <input type="text" placeholder="Search" id="search" />
             
             </div>
             <div class="show-product">

@@ -620,11 +620,13 @@ $(document).ready(() => {
 
     $('#search').keypress((event) => {
         if (event.target.value !== "") {
-            var input = new RegExp(event.target.value, 'g');
+            var input = new RegExp(event.target.value.toLowerCase(), 'g');
             if (event.key === "Enter") {
                 console.log("Enter");
-                newArray = dresses.filter((dress) => {
-                    return dress.name.match(input)
+                newArray = dresses.filter((dress) => { 
+                    if(dress.name.toLowerCase().match(input) || dress.tone.toLowerCase().match(input) || dress.fastival.toLowerCase().match(input)) {
+                        return dress
+                    }
                 })
                 var newHTMLFilter = newArray.map((data) => {
                     return (
